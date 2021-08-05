@@ -1,0 +1,35 @@
+﻿@using XiaoJinDong.Models
+@model List<Userjin>
+@{
+    ViewBag.Title = "用户";
+}
+<style>
+    #lan {
+        color: red;
+    }
+
+    #jin {
+        border: 3px solid #0094ff;
+        margin-top: 20px;
+        width: 200px;
+        display: inline-block;
+        margin-right: 20px;
+        margin-left: 50px;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+</style>
+<div id="lan ">
+    @foreach (Userjin item in Model)
+    {
+        <div id="jin">
+            <div>用户名：@item.UserName</div>
+            <div>电话：@item.Phone</div>
+            <div>创建时间：@item.CreationTime</div>
+            <div>改变时间：@item.ChangeTime</div>
+            <div>密码:@item.Password</div>
+            <div>用户ID:@item.ID</div>
+           
+        </div>
+    }
+</div>

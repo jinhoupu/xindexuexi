@@ -1,0 +1,1183 @@
+﻿
+@{
+    ViewBag.Title = "小京东";
+}
+<!--<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+<style>
+    .backcolor {
+        background-color: rgb(244,244,244);
+        width: 100%;
+        height: 100%;
+    }
+    #Count-Title {
+        background-color: red;
+        border: none;
+        width: 190px;
+        height: 260px;
+        margin-top: 10px;
+        background-image: url(../Image/5.png)
+    }
+
+    .countdown-desc {
+        width: 190px;
+        height: 26px;
+        color: white;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .TextDecoration {
+    }
+
+    .tab-content1 {
+        margin-top: 10px;
+        width: 200px;
+        height: 260px;
+        background-color: white;
+        border: none;
+        float: left;
+        color:black;
+        font-weight:400;
+        text-align:center;
+    }
+
+    .price-miaosha {
+        border: 2px solid red;
+        height: 22px;
+        font-size: 12px;
+        font-weight: 800;
+        color: white;
+        background-color: red;
+        width: 150px;
+        text-align: center;
+        font-size: 16px;
+        float: left;
+    }
+</style>
+
+<style>
+    .jin {
+        width: 100%;
+        height: 140px;
+        background-color: white;
+        border: 1px solid gray;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+        .jin input {
+            width: 500px;
+            height: 32px;
+            padding: 2px;
+            outline: none;
+            border: 1px solid transparent;
+        }
+
+        .jin > div:nth-child(1) {
+            display: inline-block;
+            width: 550px;
+            height: 36px;
+            border: 2px solid #e1251b;
+            background: #fff;
+        }
+
+    .button {
+        width: 50px;
+        height: 33px;
+        cursor: pointer;
+        background: #e1251b;
+        color: white;
+        border: none;
+    }
+
+    .history {
+        font: 12px/1.5 Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;
+        color: #999;
+        float: left;
+    }
+
+    .recommend {
+        display: inline-block;
+        font-size: 15px;
+        padding-top: 20px;
+        margin-left: 11px;
+        margin-right: 11px;
+        color: black;
+        position: absolute;
+    }
+
+    .active {
+        margin-right: 10px;
+    }
+
+    .position {
+        margin-left: 15px;
+    }
+
+    div a:hover {
+        color: red;
+    }
+
+    .search {
+        width: 1190px;
+        float: left;
+    }
+</style>
+
+<style>
+    .leftframe {
+        height: 470px;
+        width: 190px;
+        border: 1px solid gray;
+        background-color: white;
+    }
+
+    .rightframe {
+        height:470px;
+        border: 1px solid gray;
+        background-color: white;
+    }
+
+    .border {
+        height: 25px;
+        width: 185px;
+        margin-top: 10px;
+    }
+
+    .menu-item {
+        margin-top: 10px;
+        padding-top: 5px;
+        padding-left: 20px;
+        padding-bottom: 5px;
+        padding-right: 5px;
+        text-decoration: none;
+    }
+
+    b:hover {
+        color: red;
+        text-decoration: none;
+        background-color: lightgray;
+    }
+
+    cate_menu_lk {
+        width: 160px;
+    }
+
+    #enroll {
+        color: gray;
+        margin-left: 10px;
+        margin-top: -40px;
+        text-decoration: none;
+        font: 12px/1.5 Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;
+    }
+
+    d:hover {
+        color: red;
+    }
+
+    #button1:hover {
+        background-color: orangered;
+    }
+
+    #button2:hover {
+        background-color: red;
+        color: white;
+    }
+
+    #enroll1 {
+        width: 32px;
+        height: 16px;
+        float: left;
+        text-decoration: none;
+        margin-left: 75px;
+        color: black;
+        margin-top: -23px;
+        border-right: 1px solid black;
+        font: 12px/1.5 Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;
+    }
+
+    #enroll2 {
+        height: 16px;
+        float: left;
+        margin-left: 115px;
+        color: black;
+        text-decoration: none;
+        margin-top: -23px;
+        font: 12px/1.5 Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;
+    }
+
+    #button1 {
+        margin-left: 10px;
+        width: 70px;
+        height: 25px;
+        border-radius: 13px;
+        background-color: red;
+        font-size: 12px;
+        transition: background 0.3s;
+        text-align: center;
+        padding-top: 5px;
+        margin-top: 10px;
+    }
+
+    #button2 {
+        margin-top: -25px;
+        margin-left: 90px;
+        width: 70px;
+        height: 25px;
+        border-radius: 13px;
+        background-color: black;
+        font-size: 12px;
+        transition: background 0.3s;
+        text-align: center;
+        padding-top: 5px;
+    }
+
+    #comment1 {
+        font: 12px/1.5 Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;
+        text-decoration: none;
+        margin-left: 5px;
+    }
+
+        #comment1:hover {
+            color: red;
+        }
+</style>
+
+<style>
+    a {
+        text-decoration: none;
+        color: darkgray;
+    }
+
+    .header {
+        background-color: #f1f1f1;
+        list-style: none;
+        height: 30px;
+        color: red;
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+        font: 12px/1.5 Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;
+    }
+
+    li {
+        float: left;
+        height: 16px;
+        padding: 0px 10px;
+        list-style: none;
+        margin-top: 5px;
+        border-right: 1px solid gray;
+    }
+
+        li a:hover {
+            color: rgb(255,0,0);
+        }
+    .special_item_3 {
+    width:170px;
+    height:89px;
+    margin-top:20px;
+    }
+
+</style>
+
+<div class="backcolor">
+
+    <div class="header">
+        <div class=" container">
+            <div class="row">
+                <div class="col-sm-4">
+                </div>
+                <ul>
+                    <li><a href="#home">你好,请登录 </a></li>
+                    <li><a href="#home" style="color:red;"> 免费注册 </a></li>
+                    <li><a href="#news"> 我的订单</a></li>
+                    <li><a href="#contact">我的京东 </a></li>
+                    <li><a href="#contact">京东会员 </a></li>
+                    <li><a href="#about"> 企业采购 </a></li>
+                    <li><a href="#about"> 客服服务 </a></li>
+                    <li><a href="#about">网站导航 </a></li>
+                    <li><a href="#about"> 手机京东 </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div style="background-color:white;border:1px solid red;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2">
+                    <a style="width:190px;height:120px;background-image:url(../Image/sprite.png);display:block;float:left;margin-top:10px;"></a>
+                </div>
+                <div class="col-sm-8">
+                    <div class="row">
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-10">
+                            <div style="border:2px solid #e2231a; height:36px;margin-top:25px;">
+                                <input type="text" placeholder="请输入你想要搜索的内容..."
+                                       style="height:32px;border:none;float:left;width:80%;outline:none;padding-left:20px;">
+                                <button class="button glyphicon glyphicon-search" style="float:right; top: 0;left:1px;"></button>
+                            </div>
+                        </div>
+                        <div class="col-sm-1"> </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-1 col-xs-1 col-lg-1"></div>
+                        <div class="col-sm-10">
+                            <div class="history">
+                                <a class="active" href="#home"> 欧洲杯盛宴 </a>
+                                <a class="active" href="#home"> 5折清仓</a>
+                                <a class="active" href="#home"> PLUS会员</a>
+                                <a class="active" href="#home"> 品牌闪购</a>
+                                <a class="active" href="#home"> 台农芒果</a>
+                                <a class="active" href="#home">三星手机</a>
+                                <a class="active" href="#home">家装建材</a>
+                                <a class="active" href="#home"> 小米</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="recommend">
+                                <a class="position" href="#home" style="color:red;"><strong>秒杀</strong></a>
+                                <a class="position" href="#home" style="color:red;"><strong>优惠券</strong> </a>
+                                <a class="position" href="#home" style="color:black;"> PLUS会员 </a>
+                                <a class="position" href="#home" style="color:black;"> 品牌闪购 </a>
+                                <a class="position" href="#home" style="color:black;"> 拍卖 </a>
+                                <a class="position" href="#home" style="color:black;"> 京东家电 </a>
+                                <a class="position" href="#home" style="color:black;">京东超市 </a>
+                                <a class="position" href="#home" style="color:black;"> 京东生鲜 </a>
+                                <a class="position" href="#home" style="color:black;"> 京东国际</a>
+                                <a class="position" href="#home" style="color:black;"> 京东云 </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top:10px;">
+        <div class="row">
+            <div class="col-sm-2" style="float:left;">
+                <div class="leftframe">
+                    <div class="border">
+                        <a class="cate_menu_lk" style="padding-left:18px;padding-right:90px;margin-right:10px;"><b style="color:black;">家用电器</b></a>
+                        <a target="_blank" class="cate_menu_lk" href="//shouji.jd.com/" style="padding-left:18px;"><b style="color:black;">手机</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//wt.jd.com"><b style="color:black;">运营商</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/" style="margin-right:20px;"><b style="color:black;">数码</b></a>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/" style="margin-left:20px;"><b style="color:black;">电脑</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" href="//shuma.jd.com/" style="margin-right:80px;"><b style="color:black;">办公</b></a>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/" style="margin-left:20px;"><b style="color:black;">家居</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/"><b style="color:black;">家具</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/"><b style="color:black;">家装</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/"><b style="color:black;">厨具</b></a>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/" style="margin-left:20px;"><b style="color:black;">男装</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/"><b style="color:black;">女装</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/"><b style="color:black;">童装</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/"><b style="color:black;">内衣</b></a>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/" style="margin-left:20px;"><b style="color:black;">美妆</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/"><b style="color:black;">个人清洁</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/"><b style="color:black;">宠物</b></a>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/" style="margin-left:20px;"><b style="color:black;">女鞋</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/"><b style="color:black;">箱包</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/"><b style="color:black;">钟表</b></a>
+                        <span class="cate_menu_line">/</span><b style="color:black;"></b>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/"><b style="color:black;">珠宝</b></a>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/" style="margin-left:20px;"><b style="color:black;">男鞋</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/"><b style="color:black;">运动</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/"><b style="color:black;">数码</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/"><b style="color:black;">户外</b></a>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/" style="margin-left:20px;"><b style="color:black;">房产</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/"><b style="color:black;">汽车</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/"><b style="color:black;">汽车用品</b></a>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/" style="margin-left:20px;"><b style="color:black;">母婴</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/" style="margin-right:60px;"><b style="color:black;">玩具乐器</b></a>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/" style="margin-left:20px;"><b style="color:black;">食品</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/"><b style="color:black;">酒类</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/"><b style="color:black;">生鲜</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/"><b style="color:black;">特产</b></a>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/" style="margin-left:20px;"><b style="color:black;">艺术</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/"><b style="color:black;">礼品鲜花</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/"><b style="color:black;">农资绿植</b></a>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/" style="margin-left:20px;"><b style="color:black;">医药保健</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/" style="margin-right:40px;"><b style="color:black;">计生情趣</b></a>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/" style="margin-left:20px;"><b style="color:black;">图书</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/"><b style="color:black;">文娱</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/"><b style="color:black;">教育</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/"><b style="color:black;">电子书</b></a>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/" style="margin-left:20px;"><b style="color:black;">机票</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/"><b style="color:black;">酒店</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/"><b style="color:black;">旅游</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/"><b style="color:black;">生活</b></a>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/" style="margin-left:20px;"><b style="color:black;">理财</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/"><b style="color:black;"><b style="color:black;">众筹</b></b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/"><b style="color:black;">白条</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/"><b style="color:black;">保险</b></a>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/" style="margin-left:20px;"><b style="color:black;">安装</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/"><b style="color:black;">维修</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/"><b style="color:black;">清洗</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/"><b style="color:black;">二手</b></a>
+                        <span class="cate_menu_line">/</span>
+                        <a target="_blank" class="cate_menu_lk" href="//shuma.jd.com/" style="margin-left:20px;"><b style="color:black;">工业品</b></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <img src="~/Image/q.jpg">
+                </div>
+            <div class="col-sm-2" style="padding:0 20px;">
+                <img src="~/Image/1.jpg" style="width: 100%; height: 146px; margin-left: 10px; ">
+                <img src="~/Image/2.jpg" style="width: 100%; height: 146px; margin-left: 10px; margin-top: 16px;">
+                <img src="~/Image/3.jpg" style="width: 100%; height: 146px; margin-left: 10px; margin-top: 16px; ">
+            </div>
+            <div class="col-sm-2 rightframe" >
+                    <img src="~/Image/4.jpg" style="width:40px;height:40px;margin-top:15px;margin-left:20px;border-radius:50%;">
+                    <a id="enroll" href="#home"><d>Hi~欢迎逛京东！<d></a>
+                    <a id="enroll1" href="#home"><d>登录</d></a>
+                    <a id="enroll2" href="#home"><d>注册</d></a>
+                    <div id="button1">
+                        <a href="#home" style="color:white;text-decoration:none;">新人福利</a>
+                    </div>
+                    <div id="button2">
+                        <a href="#home" style="color:#e5d790;text-decoration:none;">PLUS会员</a>
+                    </div>
+
+                    <div style="border-bottom:1px solid lightgray;margin-top:5px;">
+                    </div>
+                    <div>
+                        <strong>京东快报</strong>
+                    </div>
+                    <div style="border:1px solid none;background-color:lightgray;width:35px;height:16px;color:red;text-align:center;float:left;">热评</div>
+                    <div>
+                        <a id="comment1" href="#Home">恒温沐浴的幸福感</a>
+                    </div>
+                    <div style="border:1px solid none;background-color:lightgray;width:35px;height:16px;color:red;text-align:center;float:left;">热门</div>
+                    <div>
+                        <a id="comment1" href="#Home">超丝滑游戏体验</a>
+                    </div>
+                    <div style="border:1px solid none;background-color:lightgray;width:35px;height:16px;color:red;text-align:center;float:left;">HOT</div>
+                    <div>
+                        <a id="comment1" href="#Home">全能旗舰，刷新体验</a>
+                    </div>
+                    <div style="border:1px solid none;background-color:lightgray;width:35px;height:16px;color:red;text-align:center;float:left;">热评</div>
+                    <div>
+                        <a id="comment1" href="#Home">挑手机怎么看配置</a>
+                    </div>
+                    <div style="border-bottom:1px solid lightgray;width:130px;">
+                    </div>
+                
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <div id="Count-Title">
+                    <div style="font-size:30px;color:white;padding-top:30px;text-align: center;">京东秒杀</div>
+                    <div class="countdown-desc"><div><innal style="font-weight:900">16:00<innal style="font-weight:100">点场 距结束</div></div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="tab-content1">
+                    <div class="row">
+                        <div class="col-sm-12" style="padding-top:20px;">
+                            <img src="~/Image/6.jpg">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12" style="margin-top:30px;">
+                            <a href="#home" style="color: black; text-align: center;">荣耀畅玩20 手机 老人机 </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <span class="price-miaosha" style="margin-top:10px;margin-left:20px;"><i>¥</i>1024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="tab-content1">
+                    <div class="row">
+                        <div class="col-sm-12" style="padding-top:20px;">
+                            <img src="~/Image/11.jpg" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12" style="padding-top:40px;">
+                            <a href="#home" style="color:black;text-align:center;margin-top:20px;">太阳能热水器 </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <span class="price-miaosha" style="margin-top:10px;margin-left:20px;"><i>¥</i>1024</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="tab-content1">
+                    <div class="row">
+                        <div class="col-sm-12" style="padding-top:20px;">
+                            <img src="data:image/jpg;base64,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" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12" style="padding-top:30px;">
+                            <a href="#home" style="color:black;text-align:center;margin-left:20px;">荣耀畅玩20 手机  </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <span class="price-miaosha" style="margin-top:10px;margin-left:20px;"><i>¥</i>1024</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="tab-content1">
+                    <div class="row">
+                        <div class="col-sm-12" style="padding-top:20px;">
+                            <img src="data:image/jpg;base64,UklGRrQGAABXRUJQVlA4IKgGAADQIwCdASqMAIwAPjEYikQiIaEROq0sIAMEs6I9nACwHEGtVAJr4vgt6IfUnty/2l9QH6h/t37rnor8mbrMPQR8s/9wPhS/bv9wPay1YFlnfz5gk0ZZTfPuVf0bib00+Fp+M3wzaDnq72D/1f/1X27+Cb0MP1jHt3qapD2WeJERBkiQdrJ+0Qp45c2Btp6FGExtwMKnCoyB1eH3XVHBxPhZMsA1BhfymL1beAgT8+eEJenqvsTZ0RyB8FDa5ikFdyp8y5nQtWiVy+/PW6c76xcJOd6PeRNl+Xvdmw2IfTGUsQzN+O+7A1nFVlH9l3U+akkxmlPzyKt9+92CzlYXmnyMkcNnCT49db+t+jwNcLB3LAXthoc9wAwlw5P7oOhM1NrJ3R0Yc+8AAP7+tCqu/pP2Bi3XpinVJzppExo0/zLKOjHFZPNFW0DwFOXEu3cGomXOtMC/1/6jPoLHQj1XiGvo2zG6DbpbVtbARDZGBSPdwrrBExa99znB4ZeZ2jXhOQB3QaFqbEE7hF07OjX3wfywNI3+D4owV4fWbGBsbdJEVg07GpHJJnt16/tZ/Y+fGtSrSZ1L3+mg65Ak84pLQoiOyqYIS7HjKQriB2mrnZBdfQpKvvEyZWDhEdA44S85ehnUkQYl3gUb3diKhFvRGaBM54zt29S8kt37NyLvcI8TAJW0hLhxUElL+05UzmOnKmvRkTu/N+eMr/y+KL6/yseMmKuOoKpQBrA5+z60BdOJ5vhRKGYB3MzfF8qyJLKT+V+vpusnhlPcyv4Gfq2eCT7YMNwZPonGa3odFxvFDPufkbRqqsjTDMA4xxhrrYK0kFbCSoEIR58ol5UTmiQ0UC1BvNGF/e64pwSqpI2aemH1gfIX1q7Z3NuYLrzPlPxLfI+mN8TNl//HOqZGaLdF/JPpb7l8xaDV1GHAlseJE2/7UR8P4uBuC6tubP4PDiZy5/+mL4/3gVOQcfvpReU3S1xs6yi5bHsuQ7hT4aM1N4J9emxHFW8KLC6f5mAbanuq4Hg/iSYpu9VQN8QTX1V/+bYHbdUOOk96OkxP5IpEZ9+GYi+2Iph/cluhuW3qF9aW2cm6VP3W7me2D+l7uqu+kObec2ykscegbN3wDkV7hFgTEykBif0Vd4oZpISHORkcpvsprg9fE8QZb6K/qLpY/P4e85RNgmZRnhzVof9ehh+oG0uDuX8Eh/9EAv0K/mSc2FG6K7maJhKPrnPO4jUAni9uMOYBVRS8YFvj2Aj84enq6ld5nt8EYy3hJZfeptoXiVVPjVd1k+QCfKEwejSE+IdChtmugjj01n9/Kq6/WmN5B63t8ZcI/4+XQxuHjhupI5/D1VtN6RjGzICAeWjKNDamuewyIFCUKlrfKKMkdt6eUoK+Os9dBAtRYzm1sRnhYyX+4MZfuo/mzMPK15jUBU687jnTdXbn2pL5jWfHjX7sd0FgU4U9WiYQ+r6Iw9apYdixELx4nnqsSOdFiTuhIZdQ4Sb4no8dd1yOntuBQJxK74tv9BXL9j+CzivRRHDH+URZk3w3kUEi9QbVOq4MY9EfDHe/hgH+cAj/zf+Lltc1NQeJN0PC9WAJ3ub1rtk8a+BtmPNSpMnHHiv5Yde5R7Zdn/Oy48e6j0aQSWKvR2pWOZCqeOeXN8pp9Exs9jWr2wJKGs2tpqqfQdShYrcdkbxA2uzRdcRzyUDDuoR1xekqtunULWj0o2ATQ+v1cqSSaqwyhgsfAYLUiMFEzn+lhLcwG0NPgYeS8SA3O0q9erElg6hTyZ1e1yEze5Vd+TXEx06PMc4D/UTH75rH3YoRLhJm9ZrNV8xZ9/8AELgnd5xmT6EcHrTX2d30DMojtOo+w4IFyRCVXzz4bg4AEucuMkz+0xzhsvjI1cedFMhdXFAK05h9izX1xfmeJQQXZqvW3OqWq217vGEk9oIsZPo48eW2e4bujzyfGgRkVUDfLOytRUMEifSKto3oVwKV8S89MDzlItmLLU9hBLerHBP9vqlayyLyOur783zj4UQdYKXcsriOxf8iT/tkfAAScdAkacuGcWmevE/FFDHaymGW6w6JqN0UvRQsGSPz1uxhGriREwyumTEp4H++DBdv+GaIbuvlsDH1CHR8Ubcyc1dmLL6EuMdRalQfsrqZ071gh3qaNulgViCn5jHtjuFDoZCyDKfuWv8/lNn51g5vav4PRVi7/eN734v+VGHU2DdtYXg+Z+47eJgGMWTvv8DFoEEJ89dOK6hOxGoxHZE6YYyJ2JgEmaXmVsgAAAA=" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12" style="padding-top:30px;">
+                            <a href="#home" style="color:black;text-align:center;margin-left:20px;">香氛沐浴露 </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <span class="price-miaosha" style="margin-top:10px;margin-left:20px;"><i>¥</i>1024</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="tab-content1">
+                    <div class="row">
+                        <div class="col-sm-12" style="padding-top:20px;">
+                            <img src="data:image/jpg;base64,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" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12" style="padding-top:30px;">
+                            <a href="#home" style="color:black;text-align:center;margin-left:20px;">百雀羚 </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <span class="price-miaosha" style="margin-top:10px;margin-left:20px;"><i>¥</i>1024</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .special_offer {
+            background-color: white;
+            width: 590px;
+            height: 340px;
+            float: left
+        }
+
+        .box_hd_arrow {
+            background-image: url(//misc.360buyimg.com/mtd/pc/index_2019/1.0.0/assets/sprite/tit_arrow/sprite.png);
+            background-position: -16px 0;
+            width: 16px;
+            height: 16px;
+            position: relative;
+            float: left;
+            margin-left: 150px;
+            margin-top: -30px;
+        }
+
+            .box_hd_arrow:hover {
+                background-color: red;
+            }
+
+        .tab_head {
+            width: 290.5px;
+            height: 22px;
+        }
+
+        .special_tab_lk {
+            display: inline-block;
+            cursor: pointer;
+            font-size: 14px;
+            font-family: Microsoft Yahei,PingFangSC-Medium,sans-serif,serif;
+            color: #999;
+            line-height: 19px;
+            padding-bottom: 2px;
+            margin-top: 20px;
+            float: left;
+            margin-left: 100px;
+            color: gray;
+        }
+
+        .tab_head_item {
+            position: relative;
+            display: inline-block;
+            margin: 0 13.5px;
+        }
+
+            .tab_head_item:hover {
+                color: red;
+            }
+
+            .tab_head_item:hover {
+                border-bottom: 3px solid red;
+            }
+
+        #J_special_offer {
+            width: 170px;
+            height: 246px;
+            background-color: #f8f8f9;
+            margin-left: 20px;
+            float:left;
+        }
+
+        #outpicture {
+            background-image: url(../Image/13.jpg);
+            background-repeat: no-repeat;
+            margin-left: 0px;
+            position: static;
+            color: white;
+        }
+
+        .innerpicture {
+            float: left;
+            font-weight: 500;
+        }
+
+        #dollar_txt {
+            border: 1px solid red;
+            width: 50px;
+            height: 20px;
+        }
+
+        #special_item_jdPrice {
+            width: 100%;
+            text-decoration: line-through;
+            font-family: sans-serif,serif;
+            color: #bd99aa;
+            font-size: 12px;
+            line-height: 14px;
+            -webkit-transform: scale(.8);
+            -ms-transform: scale(.8);
+            transform: scale(.8);
+            margin-top: 2px;
+            -webkit-transform-origin: top left;
+            -ms-transform-origin: top left;
+            transform-origin: top left;
+        }
+
+        .innerpictures:hover {
+            color: red;
+        }
+
+        .special-item2 {
+            width: 170px;
+            height: 89px;
+        }
+
+        .special-item4 {
+            width: 75px;
+            height: 69px;
+            font-size: 12px;
+        }
+
+        .special_item_miaoShaPrice {
+            font-size: 14px;
+            line-height: 16px;
+            font-family: Arial-BoldMT,Microsoft Yahei,PingFangSC-Medium,sans-serif,serif;
+            color: #e1251b;
+            letter-spacing: 0;
+            margin-top: 5px;
+            font-weight: 700;
+            display: inline-block;
+        }
+
+        .dollar_txt {
+            font-size: 12px;
+        }
+
+        #J_special_offer .special_item_jdPrice {
+            display: inline-block;
+            width: 100%;
+            text-decoration: line-through;
+            font-family: sans-serif,serif;
+            color: #999;
+            font-size: 12px;
+            line-height: 14px;
+            -webkit-transform: scale(.8);
+            -ms-transform: scale(.8);
+            transform: scale(.8);
+            margin-top: 2px;
+            -webkit-transform-origin: top left;
+            -ms-transform-origin: top left;
+            transform-origin: top left;
+        }
+
+        #J_special_offer .special_item_lowest {
+            display: inline-block;
+            overflow: hidden;
+            width: 84px;
+            height: 16px;
+            font-size: 11px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: rgba(0,0,0,.6);
+            white-space: nowrap;
+            color: #fff;
+            text-align: center;
+            line-height: 16px;
+        }
+
+        .special_item_lowest {
+            display: inline-block;
+            overflow: hidden;
+            width: 84px;
+            height: 16px;
+            font-size: 11px;
+            position: absolute;
+            background: rgba(0,0,0,.6);
+            white-space: nowrap;
+            color: #fff;
+            text-align: center;
+            line-height: 16px;
+        }
+
+        .special_item_2 {
+            margin-top: 18px;
+        }
+        .special_item_lowest2 {
+            display: inline-block;
+            overflow: hidden;
+            width: 84px;
+            height: 16px;
+            font-size: 11px;
+            position: absolute;
+            background: rgba(0,0,0,.6);
+            white-space: nowrap;
+            color: #fff;
+            text-align: center;
+            line-height: 16px;
+        }
+        .special_item_lowest3 {
+            display: inline-block;
+            overflow: hidden;
+            width: 84px;
+            height: 16px;
+            font-size: 11px;
+            position: absolute;
+            background: rgba(0,0,0,.6);
+            white-space: nowrap;
+            color: #fff;
+            text-align: center;
+            line-height: 16px;
+        }
+
+        .special_item_lowest4 {
+            display: inline-block;
+            overflow: hidden;
+            width: 84px;
+            height: 16px;
+            font-size: 11px;
+            position: absolute;
+            background: rgba(0,0,0,.6);
+            white-space: nowrap;
+            color: #fff;
+            text-align: center;
+            line-height: 16px;
+        }
+
+        .special-item8 {
+            width: 170px;
+            height: 89px;
+        }
+    </style>
+
+    <div class="container" style="margin-top:20px;">
+        <div class="row">
+            <div class="col-sm-6" style="float:left;">
+                <div class="special_offer">
+                    <div class="row" style="float:left;">
+                        <div class="col-sm-4">
+                            <div style="float:left">
+                                <h2 style="margin-left:20px;margin-top:20px;font-weight:700;"> 每日特价</h2>
+                                <i class="box_hd_arrow"></i>
+                                <div id="J_special_offer">
+                                    <div id="outpicture" style="color:white;">136天最低价</div>
+                                    <img src="~/Image/14.jpg" style="margin-left:10px;margin-top:10px;">
+                                    <div style="margin-top:0px;font-weight:200">泰国进口巴掌榴莲 2-3斤</div>
+                                    <div style="text-align:center;">
+                                        <span class="dollar_txt" style="color:red;">￥</span>
+                                        <span style="color:red;font-size:18px;">79.9</span>
+                                        <span class="special_item_jdPrice">
+                                            <span class="dollar_txt" style="color:#bd99aa;font-size:12px;text-decoration:line-through;">￥128</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="special_tab_lk" style="float:left;">
+                                <div class="tab_head_item" style="margin-left:0px;">精选</div>
+                                <div class="tab_head_item">美食</div>
+                                <div class="tab_head_item">百货</div>
+                                <div class="tab_head_item">个户</div>
+                                <div class="tab_head_item">预告</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="special_item_3" href="home">
+                                        <img style="width:88px;height:88px;float:left" src="~/Image/16.jpg" />
+                                        <div class="special-item4" style="margin-left:80px;">
+                                            <div style="text-decoration:none;font-weight:500;"> 五斤装精选红富士中大果</div>
+                                            <span class="special_item_miaoShaPrice">
+                                                <span class="dollar_txt">￥</span>
+                                                19.9
+                                            </span>
+                                            <span class="special_item_jdPrice">
+                                                <span class="dollar_txt" style="color:#9999a6;text-decoration:line-through;">￥49.9</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <span class="special_item_lowest">320天最低价</span>//
+
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="special_item_3" href="home">
+                                                <img style="width:88px;height:88px;float:left" src="~/Image/18.jpg" />
+                                                <div class="special-item4" style="margin-left:80px;">
+                                                    <div style="text-decoration:none;font-weight:500;">酥梨 5斤装</div>
+                                                    <span class="special_item_miaoShaPrice">
+                                                        <span class="dollar_txt">￥</span>
+                                                        17.6
+                                                    </span>
+                                                    <span class="special_item_jdPrice">
+                                                        <span class="dollar_txt" style="color:#9999a6;text-decoration:line-through;">￥28.8</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <span class="special_item_lowest">188天最低价</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="special_item_3" href="home">
+                                        <img style="width:88px;height:88px;float:left;" src="~/Image/17.jpg" />
+                                        <div class="special-item4" style="margin-left:85px;">
+                                            日式小圆饼【2斤装】海
+                                            <span class="special_item_miaoShaPrice">
+                                                <span class="dollar_txt">￥</span>
+                                                19.9
+                                            </span>
+                                            <span class="special_item_jdPrice">
+                                                <span class="dollar_txt" style="color:#9999a6;text-decoration:line-through;">￥36.6</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <span class="special_item_lowest">266天最低价</span>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="special_item_3" href="home">
+                                                <img style="width:88px;height:88px;float:left" src="~/Image/19.jpg" />
+                                                <div class="special-item4" style="margin-left:80px;">
+                                                    <div style="text-decoration:none;font-weight:500;">葡萄 5斤装</div>
+                                                    <span class="special_item_miaoShaPrice">
+                                                        <span class="dollar_txt">￥</span>
+                                                        136
+                                                    </span>
+                                                    <span class="special_item_jdPrice">
+                                                        <span class="dollar_txt" style="color:#9999a6;text-decoration:line-through;">￥230</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <span class="special_item_lowest">199天最低价</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-sm-6" style="float:left;">
+                        <div class="special_offer2">
+                            <h2 style="margin-left:20px;margin-top:20px;font-weight:700;"> 品牌闪购</h2>
+                            <i class="box_hd_arrow"></i>
+                            <div id="J_lightning_buy">
+                                <img class="core-logo" src="~/Image/25.jpg">
+                                <h6 class="core-name">耐克品牌清仓</h6>
+                                <div class="core-desc">
+                                    <span class="core-desc__promo">低至3折起</span>
+                                    <span class="core-desc__extra">
+                                        <span class="extra-text">仅剩</span>
+                                        <div class="extra-day">
+                                            <span>2</span>天
+                                        </div>
+                                    </span>
+                                </div>
+                                <img  class="core-goods" src="~/Image/26.jpg" alt="耐克品牌清仓">
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-sm-6" style="margin-top:20px;padding-left:20px;">
+                            <div class="row">
+                                <div class="col-sm-3" style="margin-left:20px;margin-top:20px;float:left;">
+                                    <div class="logo-border">
+                                        <img src="~/Image/27.jpg" class="picture-size">
+                                        <h6 class="other-item__name"> 永久大牌抢购</h6> 
+                                    </div>
+                                    <div class="logo-border">
+                                        <img src="~/Image/29.jpg" class="picture-size">
+                                        <h6 class="other-item__name"> 永久大牌抢购</h6>
+                                    </div>
+                                    <div class="logo-border">
+                                        <img src="~/Image/31.jpg" class="picture-size">
+                                        <h6 class="other-item__name"> 永久大牌抢购</h6>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3" style="margin-left:40px;margin-top:20px;">
+                                    <div class="logo-border">
+                                        <img src="~/Image/28.jpg" class="picture-size">
+                                        <h6 class="other-item__name"> 永久大牌抢购</h6>
+                                    </div>
+                                    <div class="logo-border">
+                                        <img src="~/Image/30.jpg" class="picture-size">
+                                        <h6 class="other-item__name"> 永久大牌抢购</h6>
+                                    </div>
+                                    <div class="logo-border">
+                                        <img src="~/Image/32.jpg" class="picture-size">
+                                        <h6 class="other-item__name"> 永久大牌抢购</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                   
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+        </div>
+    
+
+
+
+    <style>
+        .special_offer2 {
+            background-color:white;--> @*#f5f8fa*@
+            <!--width: 590px;
+            height: 340px;
+            float: left
+        }
+
+        #J_lightning_buy {
+            width: 270px;
+            height: 265px;
+            background-color: #f7faf7;
+            margin-left:20px;
+        }
+         .core-logo {
+            position: relative;
+            width: 70px;
+            height: 35px;
+            display: block;
+            margin: 15px auto 0;
+            z-index: 1;
+            margin-left:100px;
+            margin-right:100px;
+            margin-top:20px;
+            padding-top:10px;
+        }
+        .core-name {
+            position: relative;
+            color: #333;
+            font-weight: 700;
+            font-size: 16px;
+            text-align: center;
+            z-index: 1;
+            margin-top: 6px;
+        }
+        .core-desc {
+            position: relative;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 13px;
+            margin-top: 1px;
+            z-index: 1;
+        }
+        .core-desc__promo {
+            padding-right: 5px;
+            position: relative;
+        }
+        .core-desc__extra {
+            padding-left: 5px;
+            position: relative;
+        }
+        .lightning-buy .goods-core .core-desc__extra .extra-text {
+            margin-right: 4px;
+        }
+        .core-desc__extra:before {
+            content: " ";
+            position: absolute;
+            left: 0;
+            width: 1px;
+            height: 10px;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            background-color: rgba(102,102,102,.4);
+        }
+        .extra-day {
+            display: inline-block;
+        }
+        .core-goods {
+            width: 130px;
+            height: 130px;
+            display: block;
+            margin: 0 auto;
+            -webkit-transition: opacity .2s ease;
+            transition: opacity .2s ease;
+            position: relative;
+        }
+        .picture-size {
+        width:100px;
+        height:50px;
+        text-align:center;
+        }
+        .other-item__name {
+            color: #666;
+            margin-top: 6px;
+            font-size: 12px;
+            font-weight: 400;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .logo-border {
+            width:135px;
+            height:100px;
+            margin-left:10px;
+        }
+
+        .nice-goods__logo--bg-1 {
+            
+            width: 190px;
+            height: 300px;
+            background-image: url(../Image/33.jpg);
+            display: block;
+            float: left;
+            margin-top: 10px;
+        }
+        .logo-text {
+            color: rgba(255,255,255,.8);
+            font-size: 16px;
+            padding-top: 55px;
+            padding-left: 20px;
+            padding-bottom: 10px;
+            display: block;
+        }
+        .logo-container {
+            width: 160px;
+            height: 90px;
+            margin-top: 15px;
+            margin-left: auto;
+            margin-right: auto;
+            background-image:url(../image/35.jpg);
+            background-size: contain;
+            background-position: 50%;
+            background-repeat: no-repeat;
+        }
+        .logo-text i {
+            background-image: url(//misc.360buyimg.com/mtd/pc/index_2019/1.0.0/assets/sprite/tit_arrow/sprite.png);
+            background-position: 0 -16px;
+            width: 16px;
+            height: 16px;
+            position: relative;
+            margin-left: 6px;
+            margin-top: -2px;
+            vertical-align: middle;
+            display: inline-block;
+        }
+
+
+    </style>
+
+   <div class="container">
+       <div class="row">
+           <div class="col-sm-2">
+               <a class="nice-goods__logo--bg-1">
+                   <div class="logo-container">
+                       <div class="logo-text"34>
+                           探索新生活
+                           <i>
+                               
+                           </i>
+                       </div>
+                   </div>
+                   
+               </a>
+               
+           </div>
+       </div>
+   </div>
+</div>-->
+  

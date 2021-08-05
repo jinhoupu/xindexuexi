@@ -1,0 +1,305 @@
+﻿
+@{
+    ViewBag.Title = "小京东";
+}
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+<style>
+    .backcolor {
+        background-color: #f1f1f1;
+        width: 100%;
+         min-width:1000px;
+        height:3100px;
+    }
+
+    .header {
+        background-color: #f1f1f1;
+        height: 30px;
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+        font: 12px/1.5 Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;
+        line-height: 30px;
+    }
+
+    li.spacer {
+        overflow: hidden;
+        margin-top: 8px;
+        width: 1px;
+        height: 10px;
+        background-color: gray;
+        float: left;
+        line-height: 15px;
+        margin-left: -75px;
+    }
+
+    li.third-x {
+        overflow: hidden;
+        margin-top: 20px;
+        width: 1px;
+        height: 520px;
+        background-color: #ccc;
+        float: left;
+        line-height: 15px;
+    }
+
+    .second {
+        background-color: white;
+        width: 100%;
+        height: 98px;
+    }
+
+    .third {
+        width:100%;
+        height: 580px;
+        margin: auto;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #ccc;
+        margin-top: 60px;
+    }
+
+    span.title {
+        width: 60px;
+        height: 35px;
+        display: inline-block;
+        float: left;
+        text-align: right;
+        white-space: pre;
+        padding: 7px 5px;
+        margin-right: 10px;
+    }
+
+    .content-box {
+        border: 1px solid gray;
+        padding: 5px;
+        width: 373px;
+        height: 47px;
+        margin-bottom: 5px;
+        margin-top: 120px;
+    }
+
+    .content-box2 {
+        border: 1px solid gray;
+        padding: 5px;
+        width: 373px;
+        height: 47px;
+        margin-bottom: 5px;
+        margin-top: 30px;
+    }
+
+    .title {
+        padding: 7px 5px;
+        margin-right: 10px;
+    }
+    .fourth {
+    width:100%;
+    height:44px;
+    background-color:black;
+    }
+    .quanbu{
+        width: 1200px;
+        margin: auto;
+    }
+    .daohang{
+        width: 210px;
+        height:44px;
+        background-color: rgb(210,33,71);
+        color: #fff;
+        font-size: 15px;
+        text-align:center;
+    }
+    .gwc {
+        color: #fff;
+        font-size: 15px;
+        display: inline-block;
+        padding-left: 30px;
+        padding-right: 30px;
+        float: right;
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 12px;
+        background-color: rgb(68,68,68);
+        background-image: url(../xiangqing/image/70.jpg);
+    }
+    .fifth {
+    width:100%;
+    height:540px;
+    background-color:white;
+    }
+    .leftImg{
+        width:100%;
+        height:400px;
+        border:1px solid lightgray;
+        margin-top:10px;
+        margin-left:10px;
+    }
+    .litleImg {
+    width:70px;
+    height:70px;
+    border:1px solid red;
+    margin-left:10px;
+    margin-top:10px;
+    }
+    .sixth {
+        height: 39px;
+        width: 228px;
+        background-color: rgb(247,247,247);
+        margin-top: 20px;
+        border: 1px solid gray;
+        text-align: center;
+        font-size: 20px;
+        padding-top: 5px;
+        float: left;
+    }
+    .sp-active {
+        color: #fff;
+        margin-top: -1px;
+        background-color: rgb(228,57,60);
+        border: 1px solid rgb(228,57,60);
+        display: inline-block;
+        width: 130px;
+        height:40px;
+        cursor: pointer;
+        box-sizing: border-box;
+    }
+    .bottom-daohang {
+    background-color:black;
+    width:100%;
+    height:38px;
+    color:white;
+    text-align:center;
+    }
+</style>
+
+<div class="backcolor"">
+    <div class="header">
+        <div class=" container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <a href="#home" style="margin-left: 10px; color:gray">海纳网首页 </a>
+                    <a href="#home" style="margin-left: 30px; color: gray "> 请登录 </a>
+                    <ul style="float:right;padding:0px;"><li class="spacer"></li></ul>
+                    <a href="#news" style="color: gray "> 注册</a>
+                </div>
+                <div class="col-sm-5">
+
+                </div>
+                <div class="col-sm-4">
+                    <div class="xiushi">
+                        <a href="#about" style="color: gray "> 我的海纳 </a>
+                        <a href="#about" style="margin-left: 10px; color: gray; "> 我的订单 </a>
+                        <a href="#contact" style="margin-left: 10px; color: gray; "> 卖家中心</a>
+                        <a href="#contact" style="margin-left: 10px; color: gray; ">联系我们 </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="second">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <img src="~/Image/66.jpg" style="margin-top:20px;margin-left:60px;">
+                </div>
+                <div class="col-sm-4">
+
+                </div>
+                <div class="col-sm-5">
+                    <div>
+                        <div>
+                            <input type="text" placeholder="请输入您想查找的商品" id="search;" style="float:left;width:320px;height:32px;margin-top:20px;border:1px solid red;">
+                        </div>
+                        <div onclick="Search();" style="background-color: #d22147; color: white; width: 62px; height: 32px; float: left; text-align: center;margin-top:20px;padding-top:5px;">搜索</div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12" style="margin-top:10px;">
+                                    <a href="" style="color:gray;margin-left:-15px; font-size:12px;">奶粉</a>
+                                    <a href="" style="color: gray; font-size: 12px;">爱他美</a>
+                                    <a href="" style="color: gray; font-size: 12px;">牛栏</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fourth">
+        <div class="quanbu">
+            <div class="daohang" style="float:left;padding-top:10px;">全部商品分类</div>
+            <div><a href="/" style="float:left;color:white;margin-top:10px;margin-left:20px;">首页</a></div>
+            <div class="gwc"><a href="/Cart" style="color:white;">购物车</a></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12" style="font-size:12px;margin-top:10px;">
+                <a href="" style="color: gray;">首页</a> &gt;
+                <a href="" style="color: gray;">母婴用品</a> &gt;
+                <a href="" style="color: gray;">宝宝食品</a> &gt;
+                <a href="" style="color: gray;">奶粉</a>
+            </div>
+        </div>
+        <div class="fifth" style="margin-top:10px;">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="leftImg">
+                        <img src="~/Image/73.jpg">
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                </div>
+            </div>
+            <div class="litleImg">
+                <img src="~/Image/74.jpg" style="height:61px;width:61px;">
+            </div>
+        </div>
+        </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3" style="float:left;">
+                <div class="sixth">推荐商品 </div>
+                <div style="width:228px;height:290px;border:1px solid gray;margin-top:58px;"></div>
+                <div style="width:228px;height:290px;border:1px solid gray;"></div>
+                <div style="width:228px;height:290px;border:1px solid gray;"></div>
+                <div style="width:228px;height:290px;border:1px solid gray;"></div>
+                <div style="width:228px;height:290px;border:1px solid gray;"></div>
+            </div>
+            <div class="col-sm-9" style="height:40px;float:left;background-color:white;padding-left:0px;margin-top:20px;margin-left:-15px;border-bottom:1px solid red;">
+                <div class="sp-active" style="text-align:center;padding-top:10px;">
+                    商品详情
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div style="margin-top:20px;">
+                            <div title="德国喜宝HiPP益生菌/益生元婴幼儿奶粉2段（6-10个月） 600g" style="float:left;margin-right:50px;">商品名称：德国喜宝HiPP益生菌/益生元婴幼儿奶粉2段（6-10个月） 600g</div>
+                            <div title="350277883423" style="margin-left:50px;">商品编号：350277883423</div>
+                            <div title="SP123456" style="float:left;margin-right:150px;">货号：SP123456</div>
+                            <div title="喜宝" style="float:left;margin-right:150px;">品牌：喜宝</div>
+                            <div title="德国" style="float:left;margin-right:150px;">生产国：德国</div>
+                            <div title="0.60" style="float:left;margin-right:140px;">商品毛重：0.60 kg</div>
+                            <div title="2017年秋季" style="float:left;margin-right:75px;">上市时间：2017年秋季</div>
+                            <div title="盒装" style="float:left;margin-right:50px;">包装单位：盒装</div>
+                        </div>
+                        <img src="~/Image/81.jpg" style="margin-top:20px;">
+                        <img src="~/Image/82.jpg" >
+                        <img src="~/Image/83.jpg" >
+                        <img src="~/Image/84.jpg">
+                        
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    
+
+</div>
+<div class="bottom-daohang" style="padding-top:10px;">
+    © 2021 - 杭州圣普网络科技有限公司
+</div>

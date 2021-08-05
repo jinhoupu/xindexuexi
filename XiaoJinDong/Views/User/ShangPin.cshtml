@@ -1,0 +1,36 @@
+﻿@using XiaoJinDong.Models
+@model List<ShangPin>
+@{
+    ViewBag.Title = "商品信息";
+}
+<style>
+    #jin {
+        color: red;
+    }
+
+    #lan {
+        border: 3px solid #0094ff;
+        margin-top: 20px;
+        width: 200px;
+        display: inline-block;
+        margin-right: 20px;
+        margin-left: 50px;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+</style>
+<div id="lan ">
+    @foreach (ShangPin item in Model)
+    {
+        <div id="jin">
+            <div>商家：@item.Business</div>
+            <div>商品表：@item.CommodityList</div>
+            <div>商品价格：@item.CommodityPrice</div>
+            <div>创建时间：@item.CreationTime</div>
+            <div>主图地址:@item.MainMapAddress</div>
+            <div>商品详情:@item.ProductDetails</div>
+            <div>商品名:@item.TradeName</div>
+            <div>修改时间:@item.RevisionTime</div>
+        </div>
+    }
+</div>
