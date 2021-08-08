@@ -71,7 +71,6 @@
     width:373px;
     height:47px;
     margin-bottom:5px;
-    margin-top:120px;
     }
     .content-box2{
         border: 1px solid gray;
@@ -141,26 +140,26 @@
                     <div  class="col-sm-1"   style="padding-left:65px;" >
                         <ul style="float:left;padding:0px;"><li class="third-x"></li></ul>
                     </div>
-                    <div class="col-sm-6" style="float:right;">
+                    <div class="col-sm-6" style="float:right;padding-top:120px;">
+                        <div id="UserNameTip" style="color:red;margin-bottom:10px;"></div>
                         <div class="content-box">
                             <span class="title">用户名 </span>
-                            <input 
-                                   id="UserName" name="UserName" placeholder="您的用户名或昵称或邮箱" type="text" value="" 
+                            <input id="UserName" name="UserName" placeholder="您的用户名或昵称或邮箱" type="text" value=""
                                    class="valid" style="margin-top: 5px; color: none; border: none; outline: none;">
                         </div>
                         <div class="content-box2">
                             <span class="title">密码 </span>
-                            <input  id="Password" name="Password" placeholder="密码最少6个字符，最多15个字符" 
-                                   type="password" class="valid"  style="margin-top:5px;color:none;border:none;outline:none;">
+                            <input id="Password" name="Password" placeholder="密码最少6个字符，最多15个字符"
+                                   type="password" class="valid" style="margin-top:5px;color:none;border:none;outline:none;">
                         </div>
                         <div class="content-box2">
                             <span class="title">验证码 </span>
-                            <input id="Code" name="Code" placeholder="请输入验证码" type="text" 
-                                   value="" style="margin-top: 5px; color: none; border: none; width: 120px; outline: none;">
+                            <input id="Code" name="Code" placeholder="请输入验证码" type="text"
+                                   style="margin-top: 5px; color: none; border: none; width: 120px; outline: none;">
                             <img onclick="RefreshCode(this);" title="单击可刷新验证码" style="float:right;margin-top:5px;">
                         </div>
                         <div class="content-box2" style="text-align:center;background-color:red;">
-                        <input id="submit" type="submit" value="登录" style="background-color:red;color:white;border:none;margin-top:5px;">
+                            <input id="submit" type="submit" value="登录" style="background-color:red;color:white;border:none;margin-top:5px;">
                         </div>
                         <div style="margin-top:20px;">
                             <input value="注册新账号" style="color: gray; border: none; outline: none;">
@@ -177,15 +176,19 @@
     $(document).ready(function () {
         $("#submit").click(function () {
             var userName = $("#UserName").val();
-          
             var password = $("#Password").val();
- 
             $.post("http://localhost:51420/Login/SignIn", {
                 userName: userName,
                 password: password,
             },
                 function (data, status) {
-                    alert("数据: \n" + data + "\n状态: " + status);
+                    //alert("数据: \n" + data + "\n状态: " + status);
+                    if (data == "登录成功") {
+                        window.location.href = "http://localhost:51420/Register/Register";
+                    } else {
+                        alert(data);
+                        $("#UserNameTip").text(data);
+                    }
                 });
         });
     });

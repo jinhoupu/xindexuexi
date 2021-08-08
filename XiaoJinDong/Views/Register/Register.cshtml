@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewBag.Title = "注册";
+}
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+    .content-box {
+        border: 2px solid red;
+        width: 400px;
+        height: 40px;
+        text-align: center;
+        padding-top: 5px;
+        padding-left: 5px;
+        margin-top: 30px;
+    }
+    .back-color {
+    background-color:white;
+    height:100%;
+    width:100%;
+    }
+</style>
+<div class="back-color">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4" style="float:left;"></div>
+            <div class="col-sm-8">
+                <h2 style="margin-left:120px;color:red;">注册页面</h2>
+                <div class="bigContent-box" style="width:420px;height:400px;border:3px solid gray;text-align:center;">
+                    <div class="content-box" style="margin-left:5px;margin-top:40px;">
+                        <div id="UserNameTip" style="color:red;margin-bottom:10px;"></div>
+                        <div style="width: 300px; height: 30px;">
+                            <span style="float:left;">用户名: </span>
+                            <input id="UserName"  placeholder="您的用户名或昵称或邮箱" type="text" value=""
+                                   class="valid" style="border: none; outline: none">
+                        </div>
+                    </div>
+                    <div class="content-box" style="margin-top: 40px; margin-left: 5px;">
+                        <div style="width: 350px; height: 30px;">
+                            <span style="float:left;">密码: </span>
+                            <input id="password"  placeholder="密码最少6个字符，最多15个字符" type="password" value=""
+                                   class="valid" style="border: none; outline: none">
+                        </div>
+                    </div>
+                    <div class="content-box" style="margin-top: 40px; margin-left: 5px;">
+                        <div style="width: 350px; height: 30px;">
+                            <span style="float:left;">确认密码: </span>
+                            <input id="password2"  placeholder="密码最少6个字符，最多15个字符" type="password" value=""
+                                   class="valid" style="border:none; outline:none">
+                        </div>
+                    </div>
+                    <div class="content-box2" style="background-color:red;height:50px;width:400px;margin-left:5px;margin-top:40px;">
+                        <input id="submit" type="submit" value="确认注册" style="background-color:red;color:white;border:3px solid red;width:100%;height:100%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#submit").click(function () {//当点击id=submit的确认注册之后才会执行下面的功能;
+            var userName = $("#UserName").val();//从后端获取id=UserName的值;并将其赋给userName；用户输入的用户名传给后端，再传给此处；
+            var password = $("#password").val();
+            var password2 = $("#password2").val();
+            if (password == password2) {//判断语句；
+                $.post("/Register/aRegister", {
+                    userName: userName,
+                    password: password,
+                },
+                    function (data, status) {
+                        //alert("数据: \n" + data + "\n状态: " + status);
+                        if (data == "注册成功") {
+                            window.location.href = "/Login/";//当注册成功之后就会跳转到该地址;
+                        } else {
+                            //alert(data);
+                            $("#UserNameTip").text(data);
+                            alert("这是什么");
+                        }
+                    });
+            } else {//即password和password2不相同;
+                alert("密码与确认密码不相同");
+            }
+        });
+    });
+</script>
+
+
+
+

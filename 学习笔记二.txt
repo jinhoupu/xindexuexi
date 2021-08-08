@@ -1,0 +1,26 @@
+总：创建一个登陆界面
+1.前端要求：用户昵称  密码 确认密码；
+2.后端要求:确认用户昵称是否存在
+如存在 则弹出警告：该昵称已存在；
+否则：如果确认密码和密码相同
+单机确认注册：即将用户名和密码插入到数据库中；
+则 界面跳转到登陆页面
+否则：弹出警告：确认密码与密码不同；
+具体操作
+1.创建一个新的项目：
+右单击controllers->添加->控制器；
+注意    Controller这个后缀不要改动；
+当想要创建一个视图public ActionResult Register()
+应当将视图名称与ActionResult后面的相同，否则将无法正确打开浏览器；
+即想要更换视图名称即要将ActionResult 后面的单词改为视图名称；
+2.
+
+
+
+
+
+10.以下为当需要使用$时，要用到的连接；
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+</script>
+11.以下为要使用十二三格需要用的链接；如果不添加该链接，则十二三格无法正常使用；
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
