@@ -1,0 +1,171 @@
+﻿@using XiaoJinDong.Models
+@model List<spfb>
+@{
+    ViewBag.Title = "全部商品";
+}
+<link rel="stylesheet" href="~/Content/bootstrap.min.css">
+<link rel="js" href="~/Content/">
+<style>
+    .bigBox {
+        border: 1px solid red;
+        width: 100%;
+        height: 100%;
+        margin-top: 100px;
+    }
+
+    .litleBackgroundColor {
+        background-color: lightgray;
+        width: 100%;
+        height: 20px;
+    }
+
+    .button1 {
+        float: right;
+        color: white;
+        background-color: rgb( 66, 139, 202);
+        border: none;
+        width: 50%;
+        height: 30%;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        table caption {
+            font-size: 2em;
+            font-weight: bold;
+            margin: 1em 0;
+        }
+
+    th, td {
+        border: 1px solid #999;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    table thead tr {
+        background-color: #008c8c;
+        color: #fff;
+    }
+
+    table tbody tr:nth-child(odd) {
+        background-color: #eee;
+    }
+
+    table tbody tr:hover {
+        background-color: #ccc;
+    }
+
+    table tbody tr td:first-child {
+        color: #f40;
+    }
+
+    table tfoot tr td {
+        text-align: right;
+        padding-right: 20px;
+    }
+    #preview {
+        background-color: red;
+        color: white;
+        border: none;
+    }
+    #edit {
+        background-color: rgb(92,184,92);
+        color: white;
+        border: none;
+    }
+</style>
+<div class="container" style="margin-bottom:50px;">
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+            <div class="bigBox">
+                <h5>所有商品</h5>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="litleBackgroundColor">
+                        </div>
+                    </div>
+                </div>
+                <form action="/allGoods/allGoods" method="post">
+                    <label for="name">商品名称：</label>
+                    <input name="TradeName" type="text" value="">
+
+                    <label for="name">料号：</label>
+                    <input name="ItemNo" type="text" value="">
+
+                    <label for="name">条形码：</label>
+                    <input name="BarCode" type="text" value="">
+
+                    <div>
+                        <input type="submit" value="查询" class="sp-btn sp-btn-primary ">
+                    </div>
+                </form>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table>
+                            <caption></caption>
+                            <thead>
+                                <tr>
+                                    <th>商品名称</th>
+                                    <th>状态</th>
+                                    <th>分类</th>
+                                    <th>品牌</th>
+                                    <th>料号</th>
+                                    <th>条形码</th>
+                                    <th>价格</th>
+                                    <th>库存</th>
+                                    <th>总销量</th> 
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (spfb item in Model)
+                                {
+                                <tr>
+                                    <td>@item.TradeName</td>
+                                    <td></td>
+                                    <td>行3</td>
+                                    <td>行3</td>
+                                    <td>@item.ItemNo</td>
+                                    <td>@item.BarCode</td>
+                                    <td>@item.CommodityPrice</td>
+                                    <td>@item.stock</td>
+                                    <td>行3</td>
+                                    <td>
+                                        <button id="preview">预览</button>
+                                        <button id="edit">编辑</button>
+                                        <button style="background-color: green; color: white; border: none;">删除</button>
+                                        <button style="background-color: blue; color: white; border: none;">下架</button>
+                                    </td>
+                                </tr>
+
+                                }
+                            </tbody>
+                            <tfoot>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+</div>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#preview").click(function () {//当点击id=submit的确认注册之后才会执行下面的功能;
+            window.location.href = "/xiangqing/Index";
+        });
+    });
+    $(document).ready(function () {
+        $("#edit").click(function () {//当点击id=submit的确认注册之后才会执行下面的功能;
+            window.location.href = "/edit/aedit";
+        });
+    });
+</script>

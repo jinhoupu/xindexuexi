@@ -120,8 +120,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\allGoodsController.cs" />
+    <Compile Include="Controllers\goodsOffTheShelfController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
+    <Compile Include="Controllers\ReleaseController.cs" />
     <Compile Include="Controllers\ShangPinController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\xiangqingController.cs" />
@@ -129,7 +132,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\DataTableExtension.cs" />
+    <Compile Include="Models\IndexViewModel.cs" />
     <Compile Include="Models\ShangPin.cs" />
+    <Compile Include="Models\spfb.cs" />
     <Compile Include="Models\SqlHelper.cs" />
     <Compile Include="Models\Userjin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -185,9 +190,13 @@
     <Content Include="Views\xiangqing\xiangqing.cshtml" />
     <Content Include="Views\xiangqing\Index.cshtml" />
     <Content Include="Views\Register\Register.cshtml" />
+    <Content Include="Views\Release\Release.cshtml" />
+    <Content Include="Views\allGoods\allGoods.cshtml" />
+    <Content Include="Views\goodsOffTheShelf\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\aAllGoods\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
